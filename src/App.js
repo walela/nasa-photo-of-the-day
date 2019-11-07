@@ -46,7 +46,13 @@ function App() {
           <Footer copyright={pod.copyright} />
         </>
       ) : (
-        <ReactLoading type="spin" color="blue" height="10%" width="10%" />
+        <ReactLoading
+          className="spinner"
+          type="spin"
+          color="blue"
+          height="10%"
+          width="10%"
+        />
       )}
     </div>
   );
