@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+.App {
+  width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.photo h1 {
+  font-family: "Fira Mono", monospace;
+  text-align: center;
+}
+.photo img {
+  width: 100%;
+}
+.explanation {
+  font-family: "Open Sans", sans-serif;
+}
+
+.copyright {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}

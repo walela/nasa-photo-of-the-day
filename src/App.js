@@ -22,8 +22,8 @@ function App() {
     media_type: "image",
     service_version: "v1"
   }
-  lamarseillaize93
   */
+
   useEffect(() => {
     axios
       .get(nasa_api)
@@ -35,6 +35,7 @@ function App() {
         console.error(err);
       });
   }, []);
+
   return (
     <div className="App">
       <Photo title={pod.title} url={pod.url} />
