@@ -11,6 +11,10 @@
   font-family: "Fira Mono", monospace;
   text-align: center;
 }
+.photo h3 {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
 .photo img {
   width: 100%;
 }

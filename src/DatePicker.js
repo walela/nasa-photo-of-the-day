@@ -7,10 +7,12 @@ function DatePicker(props) {
         Change date:{" "}
         <input
           type="date"
-          value={props.currentDate}
+          value={props.date}
           onChange={props.handleDateChange}
         />
       </p>
     </div>
   );
 }
+
+export default DatePicker;
