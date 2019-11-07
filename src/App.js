@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Photo from "./Photo";
 import "./App.css";
 
 const nasa_api =
@@ -7,11 +8,25 @@ const nasa_api =
 function App() {
   const [pod, setPod] = useState({});
 
+  /*
+  res.data is an object that looks like:
+  {
+    copyright: "Austin Walela",
+    date: <today's date>,
+    title: <title of the image>
+    explanation: <paragraph's of text explaining the image>,
+    url: <link to jpeg>,
+    hdurl: <link to hd version of the image> ,
+    media_type: "image",
+    service_version: "v1"
+  }
+  */
   useEffect(() => {
     axios
       .get(nasa_api)
       .then(res => {
         console.log(res.data);
+        setPod(res.data);
       })
       .catch(err => {
         console.error(err);
@@ -19,10 +34,7 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+      <Photo url={pod.url} />
     </div>
   );
 }
