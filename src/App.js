@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ReactLoading from "react-loading";
 import axios from "axios";
 import Photo from "./Photo";
 import Explanation from "./Explanation";
@@ -38,9 +39,15 @@ function App() {
 
   return (
     <div className="App">
-      <Photo title={pod.title} url={pod.url} />
-      <Explanation explanation={pod.explanation} />
-      <Footer copyright={pod.copyright} />
+      {Object.entries(pod).length ? (
+        <>
+          <Photo title={pod.title} url={pod.url} />
+          <Explanation explanation={pod.explanation} />
+          <Footer copyright={pod.copyright} />
+        </>
+      ) : (
+        <ReactLoading type="spin" color="blue" height="10%" width="10%" />
+      )}
     </div>
   );
 }
