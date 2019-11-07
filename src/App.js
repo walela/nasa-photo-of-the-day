@@ -20,6 +20,7 @@ function App() {
     media_type: "image",
     service_version: "v1"
   }
+  lamarseillaize93
   */
   useEffect(() => {
     axios
@@ -34,7 +35,7 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <Photo url={pod.url} />
+      <Photo title={pod.title} url={pod.url} />
     </div>
   );
 }
