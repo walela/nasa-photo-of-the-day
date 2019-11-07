@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Photo from "./Photo";
+import Explanation from "./Explanation";
+import Footer from "./Footer";
 import "./App.css";
 
 const nasa_api =
@@ -36,6 +38,8 @@ function App() {
   return (
     <div className="App">
       <Photo title={pod.title} url={pod.url} />
+      <Explanation explanation={pod.explanation} />
+      <Footer copyright={pod.copyright} />
     </div>
   );
 }
