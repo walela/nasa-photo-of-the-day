@@ -1,33 +1,34 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 960px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.photo h1 {
+  font-family: "Fira Mono", monospace;
+  text-align: center;
+}
+.photo h3 {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+.photo img {
+  width: 100%;
+}
+.explanation {
+  font-family: "Open Sans", sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.copyright {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+.spinner {
+  margin-top: 200px;
+  margin-left: 400px;
 }
